@@ -1,4 +1,3 @@
-// Login.js
 import React, { Component } from 'react'
 import { Redirect } from 'react-router-dom'
 
@@ -25,7 +24,8 @@ class LogIn extends Component {
 
   handleSubmit = (e) => {
     e.preventDefault()
-    this.props.mockLogIn(this.state.user)
+    this.props.mockLogIn(this.state.user)//the line that actually changes the username
+    
     this.setState({redirect: true})
   }
 
