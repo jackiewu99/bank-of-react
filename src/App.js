@@ -23,6 +23,13 @@ class App extends Component {
     this.setState({accountBalance: Math.round(debt * 100) / 100})
   }
 
+  addCredit = (creditAmount) =>
+  {
+    var cred = this.state.accountBalance
+    cred =  (parseFloat(this.state.accountBalance) + parseFloat(creditAmount.cost))
+    this.setState({accountBalance: Math.round(cred * 100) / 100})
+    
+  }
   constructor() {
     
     super();
@@ -67,6 +74,7 @@ class App extends Component {
     const UserProfileComponent = () => (<UserProfile userName={this.state.currentUser.userName} memberSince={this.state.currentUser.memberSince}  /> );
     const LogInComponent = () => (<LogIn user={this.state.currentUser} mockLogIn={this.mockLogIn} />);
     const DebitComponent = () => (<Debit accountBalance={this.state.accountBalance} addDebit={this.addDebit} debitInfo={this.state.debits}/> );
+    const CreditComponent = () => (<Credit accountBalance={this.state.accountBalance} addCredit={this.addCredit}/> );
     return (
         <Router>
           <div>
@@ -75,6 +83,7 @@ class App extends Component {
             <Route exact path="/userProfile" render={UserProfileComponent}/>
             <Route exact path="/login" render={LogInComponent}/>
             <Route exact path="/debit" render={DebitComponent}/>
+            <Route exact path="/credit" render={CreditComponent}/>
           </div>
         </Router>
     );
