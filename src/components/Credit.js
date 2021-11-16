@@ -9,7 +9,7 @@ class Credit extends Component {
     super()
     this.state = {
       gain: {
-        cost: 0,
+        cost: '',
         reason: '',
         date:''
       },
@@ -34,9 +34,7 @@ class Credit extends Component {
   }
 
 
-
   render () {
-
     return (
       <div>
         <h1>CREDIT</h1>
@@ -51,7 +49,7 @@ class Credit extends Component {
             <label htmlFor="Amount">Amount</label>
             <input type="number" name="cost" onChange={this.handleChange} value={this.state.gain.cost} />
           </div>
-          <button>Add</button>
+          <button>Add Credit</button>
         </form>
         <Link to="./">Home</Link>
         <Link to="/userprofile">User Profile</Link>
