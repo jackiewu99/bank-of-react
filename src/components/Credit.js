@@ -33,10 +33,22 @@ class Credit extends Component {
     this.props.addCredit(this.state.gain)
   }
 
+  
 
   render () {
+    var displayItem = ''
+    for(var i = 0; i < this.props.creditInfo.length;i++)
+    {
+     displayItem = displayItem + 'Date:  ' + this.props.creditInfo[i].date.substring(0,10) + 
+                                    ' Item:   ' + this.props.creditInfo[i].description + 
+                                    ' Cost:   ' + this.props.creditInfo[i].amount + 
+                                    '\r' ;
+    <br/>
+                                  
+    }
     return (
       <div>
+        <h2>{displayItem}</h2>
         <h1>CREDIT</h1>
         <AccountBalance accountBalance={this.props.accountBalance}/>
         <form onSubmit={this.handleSubmit}>
