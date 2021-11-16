@@ -16,14 +16,15 @@ class App extends Component {
     this.setState({currentUser: newUser})
   }
 
-  addDebit = (debitAmount) => 
+  addDebit = (debitAmount) => //addDebit function to add the debit to account balance
   {
     var debt = this.state.accountBalance
-    debt = (parseFloat(this.state.accountBalance) - debitAmount.cost)
+    debt = (parseFloat(this.state.accountBalance) - debitAmount.amount)
     this.setState({accountBalance: Math.round(debt * 100) / 100})
+
   }
 
-  addCredit = (creditAmount) =>
+  addCredit = (creditAmount) => //addCredit function to add the credit to account balance
   {
     var cred = this.state.accountBalance
     cred =  (parseFloat(this.state.accountBalance) + parseFloat(creditAmount.cost))
@@ -45,7 +46,7 @@ class App extends Component {
     }  
   }
 
-  async componentDidMount() {
+  async componentDidMount() { //gets the given data and inserts into debits,credits, and account balance
     let debits = await axios.get("https://moj-api.herokuapp.com/debits")
     let credits = await axios.get("https://moj-api.herokuapp.com/credits")
 
@@ -60,8 +61,7 @@ class App extends Component {
   })
   let accountBalance = Number.parseFloat((creditSum - debitSum)).toFixed(2);
   this.setState({debits, credits, accountBalance});
-  //document.write(debits[0])
-  //document.write(JSON.stringify(debits[0]))
+
   }
   
   

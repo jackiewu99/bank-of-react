@@ -10,8 +10,8 @@ class Debit extends Component {
     
     this.state = {
       pay: {
-        cost: '',
-        reason: '',
+        amount: '',
+        description: '',
         date:''
       },
       redirect: false
@@ -27,40 +27,36 @@ class Debit extends Component {
     const inputField = e.target.name
     const inputValue = e.target.value
     updatedUser[inputField] = inputValue
-    //document.write('date' + JSON.stringify(this.props.debitInfo[0].date))
     this.setState({pay: updatedUser})
   }
 
   handleSubmit = (e) => {
     e.preventDefault()
     this.props.addDebit(this.state.pay)
-    
+    this.props.debitInfo.push(this.state.pay)
+    this.displayItems();
   }
 
- test = (e) =>
- {
-  e.preventDefault()
-  return this.props.debitInfo.map((this.props.debitInfo));
- }
-
- 
-  render () {
-    var displayItem = ''
+ displayItems = () =>{
+  var displayItem = ''
     for(var i = 0; i < this.props.debitInfo.length;i++)
     {
-     displayItem = displayItem + 'Date:  ' + this.props.debitInfo[i].date.substring(0,10) + 
+     displayItem = displayItem + <br/> + 'Date:  ' + this.props.debitInfo[i].date.substring(0,10) + 
                                     ' Item:   ' + this.props.debitInfo[i].description + 
-                                    ' Cost:   ' + this.props.debitInfo[i].amount + 
-                                    '\r' ;
-    <br/>
-                                  
+                                    ' Cost:   ' + this.props.debitInfo[i].amount
     }
-    displayItem = displayItem.split('')
+   return displayItem = displayItem.split(<br/>)
+  }
+
+  render () {
+    
+
+
     return (
       
       <div>
         <h2>
-        {displayItem}
+        {this.displayItems()}
         </h2>
         <h2></h2>
          <h1>DEBIT</h1>
@@ -68,11 +64,11 @@ class Debit extends Component {
         <form onSubmit={this.handleSubmit}>
           <div>
             <label htmlFor="Reason">Reason</label>
-            <input type="text" name="reason" onChange={this.testMap}/>
+            <input type="text" name="description" onChange={this.handleChange} value={this.state.pay.description}/>
           </div>
           <div>
             <label htmlFor="Amount">Amount</label>
-            <input type="number" name="cost" onChange={this.handleChange} value={this.state.pay.cost} />
+            <input type="number" name="amount" onChange={this.handleChange} value={this.state.pay.amount} />
           </div>
           <button>Add Debit</button>
         </form>
