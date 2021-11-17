@@ -49,11 +49,11 @@ class Debit extends Component {
   var displayItem = ''
     for(var i = 0; i < this.props.debitInfo.length;i++)
     {
-     displayItem = displayItem + <br/> + 'Date:  ' + this.props.debitInfo[i].date.substring(0,10) + 
+     displayItem = displayItem +  <br/>  +'Date:  ' + this.props.debitInfo[i].date.substring(0,10) + 
                                     ' Item:   ' + this.props.debitInfo[i].description + 
-                                    ' Cost:   ' + this.props.debitInfo[i].amount
+                                    ' Cost:' + this.props.debitInfo[i].amount + "\n"
     }
-   return displayItem = displayItem.split(<br/>)
+    return displayItem = displayItem.split(<br/>)
   }
 
   render () {
