@@ -7,11 +7,13 @@ import {Link} from 'react-router-dom';
 class Credit extends Component {
   constructor () {
     super()
+    var today = new Date()
+    const tdate = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate();
     this.state = {
       gain: {
         amount: '',
         description: '',
-        date:''
+        date:tdate
       },
       redirect: false
     }
