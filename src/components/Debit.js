@@ -28,11 +28,20 @@ class Debit extends Component {
     const inputValue = e.target.value
     updatedUser[inputField] = inputValue
     this.setState({pay: updatedUser})
+
+    
   }
 
   handleSubmit = (e) => {
     e.preventDefault()
     this.props.addDebit(this.state.pay)
+    
+    /*const todayDate = {...this.state.pay}
+    var today = new Date()
+    var tdate = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate();
+    todayDate[this.state.pay.date] = tdate
+    this.setState({pay: todayDate})*/
+    
     this.props.debitInfo.push(this.state.pay)
     this.displayItems();
   }

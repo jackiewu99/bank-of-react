@@ -9,8 +9,8 @@ class Credit extends Component {
     super()
     this.state = {
       gain: {
-        cost: '',
-        reason: '',
+        amount: '',
+        description: '',
         date:''
       },
       redirect: false
@@ -31,35 +31,37 @@ class Credit extends Component {
   handleSubmit = (e) => {
     e.preventDefault()
     this.props.addCredit(this.state.gain)
+
+    this.props.creditInfo.push(this.state.gain)
+    this.displayItems();
   }
 
-  
+  displayItems = () =>{
+    var displayItem = ''
+      for(var i = 0; i < this.props.creditInfo.length;i++)
+      {
+       displayItem = displayItem + <br/> + 'Date:  ' + this.props.creditInfo[i].date.substring(0,10) + 
+                                      ' Item:   ' + this.props.creditInfo[i].description + 
+                                      ' Cost:   ' + this.props.creditInfo[i].amount
+      }
+     return displayItem = displayItem.split(<br/>)
+    }
 
   render () {
-    var displayItem = ''
-    for(var i = 0; i < this.props.creditInfo.length;i++)
-    {
-     displayItem = displayItem + 'Date:  ' + this.props.creditInfo[i].date.substring(0,10) + 
-                                    ' Item:   ' + this.props.creditInfo[i].description + 
-                                    ' Cost:   ' + this.props.creditInfo[i].amount + 
-                                    '\r' ;
-    <br/>
-                                  
-    }
     return (
       <div>
-        <h2>{displayItem}</h2>
+        <h2>{this.displayItems()}</h2>
         <h1>CREDIT</h1>
         <AccountBalance accountBalance={this.props.accountBalance}/>
         <form onSubmit={this.handleSubmit}>
           <div>
             <label htmlFor="Reason">Reason</label>
-            <input type="text" name="reason" />
+            <input type="text" name="description" onChange={this.handleChange} value={this.state.gain.description}/>
 
           </div>
           <div>
             <label htmlFor="Amount">Amount</label>
-            <input type="number" name="cost" onChange={this.handleChange} value={this.state.gain.cost} />
+            <input type="number" name="amount" onChange={this.handleChange} value={this.state.gain.amount} />
           </div>
           <button>Add Credit</button>
         </form>

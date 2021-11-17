@@ -27,7 +27,7 @@ class App extends Component {
   addCredit = (creditAmount) => //addCredit function to add the credit to account balance
   {
     var cred = this.state.accountBalance
-    cred =  (parseFloat(this.state.accountBalance) + parseFloat(creditAmount.cost))
+    cred =  (parseFloat(this.state.accountBalance) + parseFloat(creditAmount.amount))
     this.setState({accountBalance: Math.round(cred * 100) / 100})
     
   }
