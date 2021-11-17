@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import AccountBalance from './AccountBalance';
 import {Link} from 'react-router-dom';
+import './basic.css';
 
 
 
@@ -72,16 +73,20 @@ class Debit extends Component {
           <div>
             <label htmlFor="Reason">Reason</label>
             <input type="text" name="description" onChange={this.handleChange} value={this.state.pay.description}/>
-          </div>
-          <div>
+          
             <label htmlFor="Amount">Amount</label>
             <input type="number" name="amount" onChange={this.handleChange} value={this.state.pay.amount} />
           </div>
           <button>Add Debit</button>
         </form>
-        <Link to="./">Home</Link>
-        <Link to="/userprofile">User Profile</Link>
+        <p id = 'test' >
+        <Link to="./" >Home </Link>
+    
+        <Link to="/userprofile">UserProfile </Link>
+     
         <Link to="/credit">Credit</Link>
+        </p>
+      
       </div>
       
       
