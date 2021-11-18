@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/bank-of-react-pages/static/css/main.87e6832d.chunk.css",
-    "main.js": "/bank-of-react-pages/static/js/main.f13d2afd.chunk.js",
-    "main.js.map": "/bank-of-react-pages/static/js/main.f13d2afd.chunk.js.map",
-    "runtime-main.js": "/bank-of-react-pages/static/js/runtime-main.1eedad74.js",
-    "runtime-main.js.map": "/bank-of-react-pages/static/js/runtime-main.1eedad74.js.map",
-    "static/js/2.8287e4ef.chunk.js": "/bank-of-react-pages/static/js/2.8287e4ef.chunk.js",
-    "static/js/2.8287e4ef.chunk.js.map": "/bank-of-react-pages/static/js/2.8287e4ef.chunk.js.map",
-    "static/js/3.14506e15.chunk.js": "/bank-of-react-pages/static/js/3.14506e15.chunk.js",
-    "static/js/3.14506e15.chunk.js.map": "/bank-of-react-pages/static/js/3.14506e15.chunk.js.map",
-    "index.html": "/bank-of-react-pages/index.html",
-    "static/css/main.87e6832d.chunk.css.map": "/bank-of-react-pages/static/css/main.87e6832d.chunk.css.map",
-    "static/js/2.8287e4ef.chunk.js.LICENSE.txt": "/bank-of-react-pages/static/js/2.8287e4ef.chunk.js.LICENSE.txt"
+    "main.css": "/jackiewu99/bank-of-react.git/static/css/main.87e6832d.chunk.css",
+    "main.js": "/jackiewu99/bank-of-react.git/static/js/main.f13d2afd.chunk.js",
+    "main.js.map": "/jackiewu99/bank-of-react.git/static/js/main.f13d2afd.chunk.js.map",
+    "runtime-main.js": "/jackiewu99/bank-of-react.git/static/js/runtime-main.a8c0bbe9.js",
+    "runtime-main.js.map": "/jackiewu99/bank-of-react.git/static/js/runtime-main.a8c0bbe9.js.map",
+    "static/js/2.8287e4ef.chunk.js": "/jackiewu99/bank-of-react.git/static/js/2.8287e4ef.chunk.js",
+    "static/js/2.8287e4ef.chunk.js.map": "/jackiewu99/bank-of-react.git/static/js/2.8287e4ef.chunk.js.map",
+    "static/js/3.14506e15.chunk.js": "/jackiewu99/bank-of-react.git/static/js/3.14506e15.chunk.js",
+    "static/js/3.14506e15.chunk.js.map": "/jackiewu99/bank-of-react.git/static/js/3.14506e15.chunk.js.map",
+    "index.html": "/jackiewu99/bank-of-react.git/index.html",
+    "static/css/main.87e6832d.chunk.css.map": "/jackiewu99/bank-of-react.git/static/css/main.87e6832d.chunk.css.map",
+    "static/js/2.8287e4ef.chunk.js.LICENSE.txt": "/jackiewu99/bank-of-react.git/static/js/2.8287e4ef.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.1eedad74.js",
+    "static/js/runtime-main.a8c0bbe9.js",
     "static/js/2.8287e4ef.chunk.js",
     "static/css/main.87e6832d.chunk.css",
     "static/js/main.f13d2afd.chunk.js"
