@@ -2,7 +2,7 @@
   "name": "bank-of-react",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://jackiewu99.github.io/bank-of-react-pages/",
+  "homepage": "https://github.com/jackiewu99/bank-of-react.git",
   "dependencies": {
     "@testing-library/jest-dom": "^5.15.0",
     "@testing-library/react": "^11.2.7",
