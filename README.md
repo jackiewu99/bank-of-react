@@ -1,3 +1,7 @@
+-Github page
+
+https://jackiewu99.github.io/bank-of-react-page/
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
